@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <nav className='app__navbar'>
             <div className='app__navbar-logo'>
-                <img src={images.logo} alt='logo'></img>
+                <img src={images.AliLogos} alt='logo'></img>
             </div>
             <ul className='app__navbar-links'>
                 {['Home', 'About', 'work', 'skills', 'contact'].map((link) => {

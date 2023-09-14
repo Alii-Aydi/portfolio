@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
 import './header.styles.scss';
+import './glich.styles.scss';
 
 const scaleVariants = {
   whileInView: {
@@ -24,17 +25,16 @@ const Header = () => (
       className="app__header-info"
     >
       <div className="app__header-badge">
-        <div className="badge-cmp app__flex">
-          <div style={{ marginLeft: 20 }}>
-            <h1>Hello, I am <span>Ali</span></h1>
-            <p className="p-text">Web Developer</p>
-            <p className="p-text">Freelancer</p>
-          </div>
+        <div className="badge-cmp">
+          <h1>Hello, I am <span class="glitch-wrapper">
+            <span class="glitch" data-text="Ali">Ali</span>
+          </span></h1>
+          <h3>Developer</h3>
+          <p>Experienced developer passionate about crafting clean, efficient code. Committed to solving complex problems and delivering innovative solutions with precision.</p>
         </div>
 
-        <div className="tag-cmp app__flex">
-          <p className="p-text">Download cv</p>
-          <button>Here</button>
+        <div className="tag-cmp">
+          <button>Download cv</button>
         </div>
       </div>
     </motion.div>
@@ -44,14 +44,16 @@ const Header = () => (
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
     >
-      <img src={images.profile} alt="profile_bg" />
-      <motion.img
-        whileInView={{ scale: [0, 1], transition: { duration: 1, ease: 'easeInOut' } }}
-        animate={{ rotate: 360, transition: { duration: 6, repeat: Infinity, ease: 'linear' } }}
-        src={images.clipCircul}
-        alt="profile_circle"
-        className="overlay_circle"
-      />
+      <div>
+        <img src={images.profile} alt="profile_bg" />
+        <motion.img
+          whileInView={{ scale: [0, 1], transition: { duration: 1, ease: 'easeInOut' } }}
+          animate={{ rotate: 360, transition: { duration: 6, repeat: Infinity, ease: 'linear' } }}
+          src={images.clipCircul}
+          alt="profile_circle"
+          className="overlay_circle"
+        />
+      </div>
     </motion.div>
 
     <motion.div

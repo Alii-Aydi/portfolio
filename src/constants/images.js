@@ -34,9 +34,16 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
-import clipCircul from '../assets/circule.svg'
+import clipCircul from '../assets/circule.svg';
+import AliLogos from '../assets/Ali-logos.svg'
+import AliLogosWhite from '../assets/Ali-logos_white.png'
+import AliTrans from '../assets/Ali-logos_transparent.svg'
+
 
 export default {
+  AliLogos,
+  AliLogosWhite,
+  AliTrans,
   email,
   mobile,
   api,
